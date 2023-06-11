@@ -1,0 +1,21 @@
+version: "3"
+services:
+  app:
+    build: .
+    ports:
+      - "5001:5000"
+    environment:
+      - APP_SETTINGS=config.ProductionConfig
+    # links:
+    #   - db
+
+  # db:
+    # platform: linux/x86_64
+    # image: mysql:8.0.21
+    # ports:
+    #   - "30000:3306"
+    # environment:
+    #   MYSQL_USER: admin
+    #   MYSQL_ROOT_PASSWORD: password
+    # volumes:
+    #   - ./db:/docker-entrypoint-initdb.d/:ro

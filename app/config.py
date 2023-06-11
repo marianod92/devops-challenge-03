@@ -8,7 +8,6 @@ class Config(object):
     #Database URL
     SQLALCHEMY_DATABASE_URI = 'mysql://admin:password@server/db'
 
-
 class DevelopmentConfig(Config):
     DEVELOPMENT = True
     DEBUG = True
