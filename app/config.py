@@ -6,9 +6,19 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     #Database URL
-    SQLALCHEMY_DATABASE_URI = ''
+    SQLALCHEMY_DATABASE_URI = 'mysql://admin:password@server/db'
 
 
 class DevelopmentConfig(Config):
     DEVELOPMENT = True
     DEBUG = True
+    CSRF_ENABLED = True
+    #Database URL
+    SQLALCHEMY_DATABASE_URI = 'mysql://admin:password@server/db'
+
+class ProductionConfig(Config):
+    DEVELOPMENT = True
+    DEBUG = True
+    CSRF_ENABLED = True
+    #Database URL
+    SQLALCHEMY_DATABASE_URI = 'mysql://admin:password@server/db'    
