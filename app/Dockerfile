@@ -1,4 +1,4 @@
-FROM python:3.11
+FROM python:3.10.5
 
 COPY requirements.txt ./
 RUN pip install --upgrade pip
@@ -8,4 +8,5 @@ WORKDIR /app
 COPY . .
 
 EXPOSE 5000
-CMD [ "flask", "run", "--host=0.0.0.0", "--port=5000", "--debug"]
+CMD [ "flask", "run", "--host=0.0.0.0", "--port=5000"]
+# CMD [ "flask", "run", "--host=0.0.0.0", "--port=5000", "--debug"]

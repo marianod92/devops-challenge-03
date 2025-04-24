@@ -6,16 +6,30 @@ services:
       - "5001:5000"
     environment:
       - APP_SETTINGS=config.ProductionConfig
-    # links:
-    #   - db
+      - "SQLALCHEMY_DATABASE_URI=mysql://app:pass@mysql:3306/db"
+    links:
+      - mysql
+    networks:
+        - app
 
-  # db:
-    # platform: linux/x86_64
-    # image: mysql:8.0.21
-    # ports:
-    #   - "30000:3306"
-    # environment:
-    #   MYSQL_USER: admin
-    #   MYSQL_ROOT_PASSWORD: password
+  mysql:
+    platform: linux/x86_64
+    image: mysql:8.0.21
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_USER: app
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
     # volumes:
     #   - ./db:/docker-entrypoint-initdb.d/:ro
+    networks:
+        - app
+
+networks:
+    app:
+
+# volumes:
+#     app:
+#     database:

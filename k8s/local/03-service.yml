@@ -7,7 +7,7 @@ spec:
     app: app
   ports:
     - port: 5000
-      nodePort: 30001
+      nodePort: 30002
     # - protocol: TCP
     #   port: 5001
     #   targetPort: 5000

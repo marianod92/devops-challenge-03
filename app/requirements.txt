@@ -1,5 +1,21 @@
+# flask
+flask-sqlalchemy==3.0.3
+flask-script==2.0.5
+Flask-Migrate==2.6.0
+sqlalchemy-migrate
+mysqlclient==2.1.1
 Flask==2.3.2
-SQLAlchemy==2.0.15
-mysql-connector
-flask-SQLAlchemy
-mysqlclient
+
+# Jinja2==3.0.3
+# itsdangerous==2.0.1
+
+
+# werkzeug==2.0.3
+
+# SQLAlchemy==2.0.15
+# mysql-connector
+# flask-SQLAlchemy
+# Flask-SQLAlchemy
+# mysqlclient
+# flask-script==2.0.5
+# Flask-Migrate==1.2.0
